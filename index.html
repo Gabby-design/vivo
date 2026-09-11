@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivo Smart Phone Office | Official Store in Wuse 2, Abuja</title>
+    <meta name="description" content="Authorized retail store for 100% original Vivo smartphones & official accessories in Wuse 2, Abuja. Located at Shop B8, First Bank Line (Green Pillar), New Banex Plaza. Rated 4.9★ on Google.">
+    
+    <meta name="theme-color" content="#0A5FDB">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        vivo: {
+                            blue: '#0A5FDB',
+                            darkblue: '#043A8B',
+                            light: '#EBF3FF',
+                            purple: '#4F46E5',
+                            accent: '#FF6B00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        document.documentElement.classList.remove('dark');
+        localStorage.removeItem('theme');
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .gradient-hero-light {
+            background: linear-gradient(135deg, #F0F6FF 0%, #E2ECFF 50%, #EBF3FF 100%);
+        }
+        .gradient-hero-dark {
+            background: linear-gradient(135deg, rgba(6, 18, 41, 0.95) 0%, rgba(10, 95, 219, 0.85) 50%, rgba(79, 70, 229, 0.9) 100%);
+        }
+        .gradient-brand {
+            background: linear-gradient(135deg, #0A5FDB 0%, #3B82F6 50%, #4F46E5 100%);
+        }
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #0A5FDB 0%, #4F46E5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased selection:bg-vivo-blue selection:text-white transition-colors duration-300 pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-900 text-slate-200 text-xs py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2 text-amber-400 font-medium">
+                <i class="fa-solid fa-store"></i>
+                <span>Shop B8, First Bank Line (Green Pillar), New Banex Plaza, Aminu Kano Crescent, Wuse 2, Abuja</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span id="liveStatusPill" class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span> Open Today
+                </span>
+                <a href="tel:08134454586" class="hover:text-white transition flex items-center gap-1.5 font-semibold text-slate-200">
+                    <i class="fa-solid fa-phone text-vivo-blue"></i> 0813 445 4586
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 gradient-brand rounded-2xl flex items-center justify-center text-white text-xl font-black shadow-lg shadow-vivo-blue/20">
+                    <span>v</span>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-heading font-black text-xl text-slate-900 dark:text-white tracking-tight">VIVO</span>
+                        <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded-full bg-vivo-light text-vivo-blue dark:bg-blue-500/20 dark:text-blue-400 border border-vivo-blue/20">Abuja Store</span>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Banex Plaza • Official Sales Store</p>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600 dark:text-slate-300">
+                <a href="index.html" class="text-vivo-blue dark:text-white font-bold border-b-2 border-vivo-blue pb-1">Home</a>
+                <a href="products.html" class="hover:text-vivo-blue dark:hover:text-white transition-colors">Shop</a>
+                <a href="contact.html" class="hover:text-vivo-blue dark:hover:text-white transition-colors">Contact & Location</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-3">
+
+                <div class="hidden lg:flex items-center space-x-2">
+                    <a href="tel:08134454586" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-vivo-blue"></i> Call Store
+                    </a>
+                    <a href="https://wa.me/2348134454586?text=Hi%20Vivo%20Smart%20Phone%20Office" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm flex items-center gap-2 shadow-md transition">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                    </a>
+                </div>
+
+                <button id="mobileMenuBtn" aria-label="Toggle menu" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200">
+                    <i class="fa-solid fa-bars text-lg" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-3 pb-6 space-y-3 text-sm">
+            <a href="index.html" class="block px-3 py-2 rounded-lg bg-vivo-light dark:bg-vivo-blue text-vivo-blue dark:text-white font-bold">Home</a>
+            <a href="products.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Shop Catalog</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-100 dark:hover:bg-slate-800">Contact & Location</a>
+        </div>
+    </header>
+
+    <!-- SHOWROOM HERO BANNER -->
+    <section class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-blue-50 via-slate-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 text-xs font-bold border border-amber-300/80 dark:border-amber-500/30">
+                            <i class="fa-solid fa-star text-amber-500"></i> 4.9 Rating (45 Google Reviews)
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-pink-100 dark:bg-pink-500/20 text-pink-900 dark:text-pink-300 text-xs font-bold border border-pink-300/80 dark:border-pink-500/30">
+                            <i class="fa-solid fa-heart text-pink-500"></i> Women-Owned Business
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-vivo-light dark:bg-blue-500/20 text-vivo-blue dark:text-blue-300 text-xs font-bold border border-vivo-blue/20">
+                            <i class="fa-solid fa-mobile-screen-button text-vivo-blue"></i> iPhones • Samsung • Vivo • Oppo
+                        </span>
+                    </div>
+
+                    <h1 class="font-heading font-black text-4xl sm:text-6xl lg:text-7xl text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+                        Your Premier <span class="gradient-text-blue">Multi-Brand Phone</span> Store in Wuse 2, Abuja
+                    </h1>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-base sm:text-xl max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Step into our store at <strong>New Banex Plaza</strong> for original Apple iPhones, Samsung Galaxy, Vivo smartphones, official accessories, and expert customer care with same-day Abuja delivery.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="tel:08134454586" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-vivo-blue hover:bg-vivo-darkblue text-white font-extrabold text-base shadow-xl shadow-vivo-blue/30 transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-phone text-lg"></i> Call Now (0813 445 4586)
+                        </a>
+                        <a href="contact.html" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-extrabold text-base shadow-md hover:bg-slate-100 transition flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-location-dot text-red-500 text-lg"></i> Get Directions
+                        </a>
+                        <a href="https://wa.me/2348134454586?text=Hello!%20I'd%20like%20to%20inquire%20about%20Vivo%20phones." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base shadow-lg transition flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Order
+                        </a>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-truck text-emerald-600 text-sm"></i> Same-Day Abuja Delivery</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-credit-card text-vivo-blue text-sm"></i> POS & Bank Transfer</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-box text-purple-600 text-sm"></i> Factory Sealed Boxes</span>
+                    </div>
+
+                </div>
+
+                <!-- 3D Phone Showcase Visual Card -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="w-full max-w-md bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-6">
+                        
+                        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+                            <div>
+                                <span class="text-[10px] uppercase font-black text-vivo-blue">Flagship Release</span>
+                                <h3 class="font-heading font-extrabold text-2xl text-slate-900 dark:text-white">Vivo V70 5G</h3>
+                            </div>
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full">In Stock</span>
+                        </div>
+
+                        <div class="relative h-64 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 group cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'" alt="Vivo V70 5G" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
+                                <span class="bg-vivo-blue text-white font-bold px-3 py-1 rounded-xl">
+                                    <i class="fa-solid fa-camera mr-1"></i> 50MP ZEISS Camera
+                                </span>
+                                <span class="bg-white/90 backdrop-blur-md text-slate-900 font-bold px-3 py-1 rounded-xl">80W Charge</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 dark:text-slate-400">
+                            <div class="bg-slate-100 dark:bg-slate-800 p-2.5 rounded-xl"><span class="block text-slate-900 dark:text-white font-bold text-sm">12GB</span> RAM + 256GB</div>
+                            <div class="bg-slate-100 dark:bg-slate-800 p-2.5 rounded-xl"><span class="block text-slate-900 dark:text-white font-bold text-sm">5000 mAh</span> Battery</div>
+                            <div class="bg-slate-100 dark:bg-slate-800 p-2.5 rounded-xl"><span class="block text-slate-900 dark:text-white font-bold text-sm">5G Ready</span> Superfast</div>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Retail Price</span>
+                                <span class="font-heading font-black text-2xl text-slate-900 dark:text-white">₦450,000</span>
+                            </div>
+                            <a href="products.html" class="px-5 py-3 rounded-xl bg-vivo-blue hover:bg-vivo-darkblue text-white font-bold text-sm shadow-md transition flex items-center gap-2">
+                                View Catalog <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST HIGHLIGHT CARDS -->
+    <section class="py-16 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 text-vivo-blue flex items-center justify-center text-2xl font-bold mb-4"><i class="fa-solid fa-circle-check"></i></div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-1">100% Original Vivo</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Brand new factory sealed devices with official manufacturer warranty documents.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl font-bold mb-4"><i class="fa-solid fa-award"></i></div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-1">Women-Owned Shop</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Proudly women-led local retail store dedicated to honesty, transparency & care.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-4"><i class="fa-solid fa-star"></i></div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-1">4.9★ Google Score</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Top rated by over 45 verified buyers across Wuse 2, Maitama, and Abuja.</p>
+            </div>
+            <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold mb-4"><i class="fa-solid fa-truck-fast"></i></div>
+                <h4 class="font-heading font-bold text-slate-900 dark:text-white text-lg mb-1">Banex Pickup & Delivery</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">Visit New Banex Plaza or order same-day doorstep delivery anywhere in Abuja.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="aboutSection" class="py-20 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center space-y-3">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-300 border border-pink-300 dark:border-pink-500/30 text-xs font-bold uppercase">
+                    <i class="fa-solid fa-heart mr-1"></i> Women-Owned Business
+                </span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white">About Vivo Smart Phone Office</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-base max-w-2xl mx-auto">Discover Abuja's premier multi-brand retail shop for 100% original smartphones and authentic accessories.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl h-[380px]">
+                        <img src="https://images.unsplash.com/photo-1556742049-0a67545b77e8?auto=format&fit=crop&w=1000&q=80" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1000&q=80'" alt="Banex Plaza Storefront" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-70"></div>
+                        <div class="absolute bottom-6 left-6 text-white text-xs font-bold bg-slate-900/90 px-4 py-2 rounded-2xl">Shop B8, New Banex Plaza (Wuse 2, Abuja)</div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-vivo-blue">Our Commitment</span>
+                    <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white">Serving Abuja with Integrity, Care & Excellence</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Situated inside the vibrant <strong>Park N' Shop complex</strong> at <strong>New Banex Plaza (First Bank Line - Green Pillar)</strong> in Wuse 2, Vivo Smart Phone Office has built an outstanding reputation as Abuja's most trustworthy smartphone retailer.
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                        As a proudly <strong>women-owned business</strong>, we bring personal care, patience, and absolute transparency to every single transaction. Whether you are buying an iPhone, Samsung Galaxy, Vivo V-Series, or fast chargers, we treat every customer with utmost respect and honesty.
+                    </p>
+
+                    <!-- RETAIL SALES ONLY NOTICE -->
+                    <div class="p-5 rounded-2xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/30 text-amber-900 dark:text-amber-200 space-y-1">
+                        <strong class="font-bold block text-base text-amber-950 dark:text-amber-300"><i class="fa-solid fa-triangle-exclamation mr-2"></i> Retail Sales Center Only</strong>
+                        <p class="text-xs sm:text-sm">Please note: We specialize exclusively in the <strong>sale of brand-new original smartphones and official accessories</strong>. We are not a repair workshop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERIFIED CUSTOMER REVIEWS SECTION -->
+    <section id="reviewsSection" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="text-center space-y-3">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-500/30 text-xs font-bold uppercase">
+                    <i class="fa-solid fa-star text-amber-500"></i> Verified Google Customer Feedback
+                </div>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 dark:text-white">What Our Customers Say</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-base max-w-2xl mx-auto">Rated 4.9 out of 5 stars based on 45 Google verified customer reviews in Abuja.</p>
+            </div>
+
+            <!-- Summary Rating Card -->
+            <div class="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-4 text-center border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-800 pb-6 md:pb-0">
+                    <span class="font-heading font-black text-6xl text-slate-900 dark:text-white">4.9</span>
+                    <div class="text-amber-400 text-xl my-2">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium block">45 Verified Google Reviews</span>
+                </div>
+
+                <div class="md:col-span-8 space-y-2 text-xs">
+                    <div class="flex items-center gap-3">
+                        <span class="w-12 font-bold text-slate-700 dark:text-slate-300">5 Star</span>
+                        <div class="flex-grow bg-slate-200 dark:bg-slate-800 h-3 rounded-full overflow-hidden">
+                            <div class="bg-amber-400 h-full w-[93%]"></div>
+                        </div>
+                        <span class="w-8 text-right font-semibold text-slate-500 dark:text-slate-400">42</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="w-12 font-bold text-slate-700 dark:text-slate-300">4 Star</span>
+                        <div class="flex-grow bg-slate-200 dark:bg-slate-800 h-3 rounded-full overflow-hidden">
+                            <div class="bg-amber-400 h-full w-[7%]"></div>
+                        </div>
+                        <span class="w-8 text-right font-semibold text-slate-500 dark:text-slate-400">3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Review Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm italic leading-relaxed">"Amazing customer service! I bought my phone here in Banex Plaza and they gave me the best price with original factory box."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold flex items-center justify-center text-sm border border-blue-200 dark:border-blue-500/30">CO</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Chidi O.</h4>
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Verified Buyer • Wuse 2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm italic leading-relaxed">"Very genuine shop. It's a women-owned business and the owner is super polite and patient. She explained all phone specs before I paid."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-500/20 text-pink-600 dark:text-pink-400 font-bold flex items-center justify-center text-sm border border-pink-200 dark:border-pink-500/30">AM</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Amina M.</h4>
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Verified Buyer • Gwarinpa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm italic leading-relaxed">"Easy location at Shop B8 First Bank Line green pillar inside Banex. Walked in, tested the phone, sealed the deal in 10 minutes."</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-center text-sm border border-emerald-200 dark:border-emerald-500/30">EK</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Emeka K.</h4>
+                            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">Verified Buyer • Maitama</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENHANCED MOBILE-APP FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-28 md:pb-14 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Col 1: Store Brand & Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 gradient-brand rounded-xl flex items-center justify-center text-white text-lg font-black shadow-lg">v</div>
+                        <div>
+                            <span class="font-heading font-black text-lg text-white block">VIVO Smart Phone Office</span>
+                            <span class="text-[10px] text-slate-400 font-medium">Abuja • Banex Plaza</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Shop B8, First Bank Line (Green Pillar), New Banex Plaza, Aminu Kano Crescent, Wuse 2, Abuja.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="px-2.5 py-1 rounded-full bg-amber-400/10 text-amber-300 border border-amber-400/20 font-bold text-[10px]">
+                            ★ 4.9 Google Reviews (45)
+                        </span>
+                        <span class="px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 font-bold text-[10px]">
+                            👩 Women-Owned
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Quick Navigation</h4>
+                    <ul class="space-y-2.5 font-medium">
+                        <li><a href="index.html" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-vivo-blue text-[10px]"></i> Home Page</a></li>
+                        <li><a href="products.html" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-vivo-blue text-[10px]"></i> Shop Full Catalog</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-vivo-blue text-[10px]"></i> Store Location & Hours</a></li>
+                        <li><a href="https://wa.me/2348134454586" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-2 font-bold"><i class="fa-brands fa-whatsapp text-sm"></i> Instant WhatsApp Order</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Popular Brands -->
+                <div class="space-y-3">
+                    <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Available Brands</h4>
+                    <ul class="space-y-2.5 font-medium text-slate-400">
+                        <li><a href="products.html?category=vivo" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-slate-500 text-[10px]"></i> Vivo V-Series & Y-Series</a></li>
+                        <li><a href="products.html?category=iphone" class="hover:text-white transition flex items-center gap-2"><i class="fa-brands fa-apple text-slate-500 text-[10px]"></i> Apple iPhone 15 & 14 Series</a></li>
+                        <li><a href="products.html?category=samsung" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-mobile-button text-slate-500 text-[10px]"></i> Samsung Galaxy Ultra & A-Series</a></li>
+                        <li><a href="products.html?category=accessories" class="hover:text-white transition flex items-center gap-2"><i class="fa-solid fa-headphones text-slate-500 text-[10px]"></i> Fast Chargers & Power Banks</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Store Hours & Contact -->
+                <div class="space-y-3">
+                    <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider">Store Hours & Call</h4>
+                    <div class="space-y-2 text-slate-400">
+                        <p class="flex justify-between border-b border-slate-800 pb-1.5"><span class="text-slate-500">Mon – Sat:</span> <span class="text-white font-bold">8:00 AM – 6:00 PM</span></p>
+                        <p class="flex justify-between border-b border-slate-800 pb-1.5"><span class="text-slate-500">Sunday:</span> <span class="text-white font-bold">12:00 PM – 5:00 PM</span></p>
+                        <a href="tel:08134454586" class="block pt-2 font-bold text-vivo-blue hover:text-blue-400 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-phone"></i> 0813 445 4586
+                        </a>
+                        <p class="text-[10px] text-amber-400 font-semibold pt-1">⚠️ Sales Only Store • No Repairs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Line -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800 pt-8 text-slate-500 text-[11px]">
+                <p>© Vivo Smart Phone Office. Shop B8, First Bank Line, New Banex Plaza, Wuse 2, Abuja.</p>
+                <p class="font-medium">100% Genuine Sealed Products • Same-Day Abuja Delivery</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- STICKY FLOATING MOBILE APP DOCK -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200 py-2 px-3 shadow-[0_-10px_25px_rgba(0,0,0,0.08)] pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
+        <div class="grid grid-cols-4 gap-1 text-center">
+            <a href="index.html" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-vivo-blue font-bold active:scale-95 transition-transform">
+                <i class="fa-solid fa-house text-lg"></i>
+                <span class="text-[10px] mt-0.5 font-bold">Home</span>
+            </a>
+            <a href="products.html" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-500 hover:text-vivo-blue active:scale-95 transition-transform">
+                <i class="fa-solid fa-store text-lg"></i>
+                <span class="text-[10px] mt-0.5 font-semibold">Shop</span>
+            </a>
+            <a href="contact.html" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-slate-500 hover:text-vivo-blue active:scale-95 transition-transform">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+                <span class="text-[10px] mt-0.5 font-semibold">Location</span>
+            </a>
+            <a href="https://wa.me/2348134454586" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center py-1.5 rounded-xl text-emerald-600 active:scale-95 transition-transform">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span class="text-[10px] mt-0.5 font-semibold">Chat</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- STORE STATUS SCRIPT -->
+    <script>
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+
+        // Live Store Hours Pill Status Calculation
+        function updateLiveStatus() {
+            const pill = document.getElementById('liveStatusPill');
+            if (!pill) return;
+            const now = new Date();
+            const day = now.getDay(); // 0 = Sun, 1-6 = Mon-Sat
+            const hour = now.getHours();
+            let isOpen = false;
+            let closingTime = '6:00 PM';
+
+            if (day >= 1 && day <= 6) { // Mon - Sat
+                if (hour >= 8 && hour < 18) isOpen = true;
+                closingTime = '6:00 PM';
+            } else if (day === 0) { // Sun
+                if (hour >= 12 && hour < 17) isOpen = true;
+                closingTime = '5:00 PM';
+            }
+
+            if (isOpen) {
+                pill.className = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+                pill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span> Open Today • Closes ${closingTime}`;
+            } else {
+                pill.className = 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30';
+                pill.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1.5"></span> Store Closed • Opens ${day === 6 ? '12:00 PM Sun' : '8:00 AM'}`;
+            }
+        }
+        updateLiveStatus();
+    </script>
+</body>
+</html>

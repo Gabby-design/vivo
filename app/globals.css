@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, #0A5FDB 0%, #3B82F6 50%, #4F46E5 100%);
+  }
+  .gradient-hero-light {
+    background: linear-gradient(135deg, #F0F6FF 0%, #E2ECFF 50%, #EBF3FF 100%);
+  }
+  .gradient-text-blue {
+    background: linear-gradient(135deg, #0A5FDB 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
