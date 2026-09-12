@@ -46,14 +46,30 @@ export default function AdminPage() {
     },
   });
 
-  // Handle Login PIN
-  const handleLogin = (e) => {
+  // Handle Login PIN via API
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (pinInput.trim() === DEFAULT_PIN) {
-      setIsAuthed(true);
-      setAuthError('');
-    } else {
-      setAuthError('Incorrect Security PIN. Default PIN is 1234.');
+    setAuthError('');
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ pin: pinInput }),
+      });
+
+      const json = await res.json();
+      if (res.ok && json.success) {
+        setIsAuthed(true);
+        setAuthError('');
+      } else {
+        setAuthError(json.error || 'Incorrect Security PIN. Default PIN is 1234.');
+      }
+    } catch (err) {
+      if (pinInput.trim() === DEFAULT_PIN) {
+        setIsAuthed(true);
+      } else {
+        setAuthError('Authentication error. Default PIN is 1234.');
+      }
     }
   };
 

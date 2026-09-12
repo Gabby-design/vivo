@@ -11,8 +11,26 @@ export function ProductProvider({ children }) {
   const [productList, setProductList] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Initialize from localStorage or default data
-  useEffect(() => {
+  // Fetch products from REST API
+  const fetchProducts = async () => {
+    try {
+      const res = await fetch('/api/products');
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && Array.isArray(json.data) && json.data.length > 0) {
+          setProductList(json.data);
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(json.data));
+          } catch (e) {}
+          setIsLoaded(true);
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('API fetch failed, reading local storage cache:', e);
+    }
+
+    // Fallback to localStorage or initial data
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
@@ -23,25 +41,39 @@ export function ProductProvider({ children }) {
           return;
         }
       }
-    } catch (e) {
-      console.error('Failed to load products from localStorage:', e);
-    }
+    } catch (e) {}
+
     setProductList(initialProducts);
     setIsLoaded(true);
-  }, []);
-
-  // Save changes to localStorage
-  const saveToStorage = (updated) => {
-    setProductList(updated);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
-    } catch (e) {
-      console.error('Failed to save products to localStorage:', e);
-    }
   };
 
-  // Add new product
-  const addProduct = (newProductData) => {
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  // Add new product via API
+  const addProduct = async (newProductData) => {
+    try {
+      const res = await fetch('/api/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newProductData),
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.data) {
+          const updated = [json.data, ...productList];
+          setProductList(updated);
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+          return json.data;
+        }
+      }
+    } catch (e) {
+      console.error('API POST failed:', e);
+    }
+
+    // Fallback local addition
     const nextId = productList.length > 0 ? Math.max(...productList.map((p) => p.id)) + 1 : 1;
     const formattedPriceNumber = parseInt(String(newProductData.priceNumber || newProductData.price).replace(/[^0-9]/g, '')) || 0;
     const formattedPrice = newProductData.price.startsWith('₦') ? newProductData.price : `₦${Number(formattedPriceNumber).toLocaleString()}`;
@@ -71,12 +103,34 @@ export function ProductProvider({ children }) {
     };
 
     const updated = [newProduct, ...productList];
-    saveToStorage(updated);
+    setProductList(updated);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
     return newProduct;
   };
 
-  // Edit existing product
-  const editProduct = (updatedProduct) => {
+  // Edit existing product via API
+  const editProduct = async (updatedProduct) => {
+    try {
+      const res = await fetch(`/api/products/${updatedProduct.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedProduct),
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success && json.data) {
+          const updated = productList.map((p) => (p.id === updatedProduct.id ? json.data : p));
+          setProductList(updated);
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+          return;
+        }
+      }
+    } catch (e) {
+      console.error('API PUT failed:', e);
+    }
+
+    // Fallback local edit
     const formattedPriceNumber = parseInt(String(updatedProduct.priceNumber || updatedProduct.price).replace(/[^0-9]/g, '')) || 0;
     const formattedPrice = String(updatedProduct.price).startsWith('₦')
       ? updatedProduct.price
@@ -89,24 +143,46 @@ export function ProductProvider({ children }) {
           ...updatedProduct,
           price: formattedPrice,
           priceNumber: formattedPriceNumber,
-          tags: `${updatedProduct.name} ${updatedProduct.category} ${updatedProduct.brand} ${updatedProduct.badge}`.toLowerCase(),
+          tags: `${updatedProduct.name} ${updatedProduct.category} ${updatedProduct.brand}`.toLowerCase(),
         };
       }
       return p;
     });
 
-    saveToStorage(updated);
+    setProductList(updated);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   };
 
-  // Delete product
-  const deleteProduct = (productId) => {
+  // Delete product via API
+  const deleteProduct = async (productId) => {
+    try {
+      const res = await fetch(`/api/products/${productId}`, {
+        method: 'DELETE',
+      });
+
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success) {
+          const updated = productList.filter((p) => p.id !== productId);
+          setProductList(updated);
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+          return;
+        }
+      }
+    } catch (e) {
+      console.error('API DELETE failed:', e);
+    }
+
+    // Fallback local delete
     const updated = productList.filter((p) => p.id !== productId);
-    saveToStorage(updated);
+    setProductList(updated);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
   };
 
   // Reset to initial catalog
   const resetProducts = () => {
-    saveToStorage(initialProducts);
+    setProductList(initialProducts);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(initialProducts));
   };
 
   return (
@@ -114,6 +190,7 @@ export function ProductProvider({ children }) {
       value={{
         products: productList,
         isLoaded,
+        fetchProducts,
         addProduct,
         editProduct,
         deleteProduct,

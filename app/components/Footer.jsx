@@ -101,7 +101,7 @@ export default function Footer() {
                 <span className="text-slate-500">Mon – Sat:</span> <span className="text-white font-bold">8:00 AM – 6:00 PM</span>
               </p>
               <p className="flex justify-between border-b border-slate-800 pb-1.5">
-                <span class="text-slate-500">Sunday:</span> <span className="text-white font-bold">12:00 PM – 5:00 PM</span>
+                <span className="text-slate-500">Sunday:</span> <span className="text-white font-bold">12:00 PM – 5:00 PM</span>
               </p>
               <a href="tel:08134454586" className="block pt-2 font-bold text-vivo-blue hover:text-blue-400 text-sm flex items-center gap-2">
                 <i className="fa-solid fa-phone"></i> 0813 445 4586
