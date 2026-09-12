@@ -49,6 +49,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/admin" className="text-slate-400 hover:text-blue-300 transition flex items-center gap-2">
+                  <i className="fa-solid fa-shield-halved text-vivo-blue text-[10px]"></i> Store Owner Portal
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://wa.me/2348134454586"
                   target="_blank"

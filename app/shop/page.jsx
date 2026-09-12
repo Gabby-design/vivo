@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { products } from '../data/products';
+import { useProducts } from '../context/ProductContext';
 import ProductCard from '../components/ProductCard';
 import ProductSpecModal from '../components/ProductSpecModal';
 
 export default function ShopPage() {
+  const { products } = useProducts();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,11 +23,11 @@ export default function ShopPage() {
         !query ||
         p.name.toLowerCase().includes(query) ||
         p.brand.toLowerCase().includes(query) ||
-        p.tags.toLowerCase().includes(query) ||
+        (p.tags && p.tags.toLowerCase().includes(query)) ||
         p.price.toLowerCase().includes(query);
       return matchesCategory && matchesSearch;
     });
-  }, [searchQuery, selectedCategory]);
+  }, [products, searchQuery, selectedCategory]);
 
   // Pagination calculation
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;

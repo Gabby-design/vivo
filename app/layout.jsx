@@ -2,6 +2,7 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileDock from './components/MobileDock';
+import { ProductProvider } from './context/ProductContext';
 
 export const metadata = {
   title: 'Vivo Smart Phone Office | Official Store in Wuse 2, Abuja',
@@ -31,10 +32,12 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-vivo-blue selection:text-white transition-colors duration-300 pb-20 md:pb-0">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <MobileDock />
+        <ProductProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <MobileDock />
+        </ProductProvider>
       </body>
     </html>
   );
